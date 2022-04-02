@@ -1,10 +1,9 @@
 import { useQuery } from 'react-query';
 
 function PostList() {
-  const { data, isFetching, isLoading } = useQuery(['posts'], () =>
+  const { data, isFetching } = useQuery(['posts'], () =>
     fetch('https://jsonplaceholder.typicode.com/posts').then((res) => res.json()),
   );
-  console.log(isFetching, isLoading);
   return (
     !isFetching && (
       <>
