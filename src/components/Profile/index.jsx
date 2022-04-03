@@ -1,20 +1,9 @@
-import { useQuery } from 'react-query';
-
-const useQueryValue = (key, placeholderData) =>
-  useQuery(key, () => placeholderData, {
-    placeholderData,
-    staleTime: Infinity,
-  }).data;
+import useClientValue from '../../hooks/useClientValue';
 
 function Profile() {
-  const { name, age } = useQueryValue('user', { user: '', age: 0 });
+  const username = useClientValue('username', '');
 
-  return (
-    <>
-      <h1>{name}</h1>
-      <h3>{age}</h3>
-    </>
-  );
+  return <h1 style={{ backgroundColor: 'red', height: 64 }}>{username}</h1>;
 }
 
 export default Profile;

@@ -1,17 +1,15 @@
 import { QueryClient, QueryClientProvider } from 'react-query';
 
-import Header from './components/Header';
+import Setting from './components/Setting';
 import Profile from './components/Profile';
-import PostList from './components/PostList';
 
 const queryClient = new QueryClient();
 
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Header />
+      <Setting />
       <Profile />
-      <PostList />
     </QueryClientProvider>
   );
 }
