@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import useSetClientState from '../../hooks/useSetClientState';
 
-function Header() {
+function Setting() {
   const [username, setUsername] = useState('');
   const setClientState = useSetClientState('username');
 
@@ -24,4 +24,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Setting;

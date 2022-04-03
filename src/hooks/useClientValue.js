@@ -1,8 +1,8 @@
 import { useQuery } from 'react-query';
 
-const useClientValue = (key, placeholderData) =>
-  useQuery(key, () => placeholderData, {
-    placeholderData,
+const useClientValue = (key, initialData) =>
+  useQuery(key, {
+    initialData,
     staleTime: Infinity,
   }).data;
 
